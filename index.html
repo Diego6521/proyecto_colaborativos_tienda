@@ -1,63 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tienda Web</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <HEader>   
-    <h1>   tienda </h1>
-      <div class="conteainer-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-          </svg>
-          
-      </div>
-    
-    </HEader>
-       <div class="container-items">
-        <div class="item">
-            <figure>
-                <img src="https://www.blog.uporabnastran.si/wp-content/uploads/2020/11/apple-iphone-12-pro-max-cena.jpg" alt="producto">
-            </figure>
-            <div class="info-product">
-            <h2>iphone 13 pro</h2>
-            <p class="price">$80</p>
-            <button>añadir al carrito</button>
-         </div>
-        </div>
-        <div class="item">
-            <figure>
-                <img src="https://www.blog.uporabnastran.si/wp-content/uploads/2020/11/apple-iphone-12-pro-max-cena.jpg" alt="producto">
-            </figure>
-            <div class="info-product">
-            <h2>iphone 13 pro</h2>
-            <p class="price">$80</p>
-            <button>añadir al carrito</button>
-         </div>
-        </div>
-        <div class="item">
-            <figure>
-                <img src="https://www.blog.uporabnastran.si/wp-content/uploads/2020/11/apple-iphone-12-pro-max-cena.jpg" alt="producto">
-            </figure>
-            <div class="info-product">
-            <h2>iphone 13 pro</h2>
-            <p class="price">$80</p>
-            <button>añadir al carrito</button>
-         </div>
-        </div>
-        <div class="item">
-            <figure>
-                <img src="https://www.blog.uporabnastran.si/wp-content/uploads/2020/11/apple-iphone-12-pro-max-cena.jpg" alt="producto">
-            </figure>
-            <div class="info-product">
-            <h2>iphone 13 pro</h2>
-            <p class="price">$80</p>
-            <button>añadir al carrito</button>
-         </div>
-        </div>
-       </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Tienda</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Tienda</h1>
+
+			<div class="container-icon">
+				<div class="container-cart-icon">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="icon-cart"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+						/>
+					</svg>
+					<div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+				</div>
+
+				<div class="container-cart-products hidden-cart">
+					<div class="row-product hidden">
+						<div class="cart-product">
+							<div class="info-cart-product">
+								<span class="cantidad-producto-carrito"> </span>
+								<p class="titulo-producto-carrito"> </p>
+								<span class="precio-producto-carrito"> </span>
+							</div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="icon-close"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						</div>
+					</div>
+
+					<div class="cart-total hidden">
+						<h3>Total:</h3>
+						<span class="total-pagar">$200</span>
+					</div>
+					<p class="cart-empty"> </p>
+				</div>
+			</div>
+		</header>
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img
+						src="https://www.vodafone.es/c/tienda/tol/img/1500196597081/Frontal-Apple-iPhone-14-Pro-Max-Silver?v=20220909103920/
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>iphone 14 pro max</h2>
+                    <h3 class = "caracteristica">
+                        Pantalla: 6.7
+                        /Procesador: Apple A16 Bionic
+                        /RAM: 6GB
+                        /Almacenamiento: 128GB/256GB/512GB/1TB
+                        /Expansión: sin microSD
+                        /Cámara: 48MP+12MP+12MP
+                        /OS: iOS 16
+                    </h3> 
+					<p class="price">$800</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://www.cqnetcr.com/105467-thickbox_default/audifonos-apple-airpods-pro-inalambricos-bluetooth.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Airpods</h2>
+                    
+                    <h3 class = "caracteristica">  
+                        Bluetooth
+                        /Sensores pausan la música al quitártelos
+                        /Control táctil y activación de Siri
+                        /Estuche que funciona como cargador portátil
+                        /Cancelación de ruido
+                        /Calidad de sonido:llamadas y música
+                        /Compatibilidad total con dispositivos Apple
+                    </h3> 
+                    <p class="price">$200</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://p.turbosquid.com/ts-thumb/9Z/zwwzAx/O35YfQEn/ipad_pro_11_inch_lte_03/jpg/1541637406/600x600/fit_q87/bff6faa9257694ca254189c8b73c29811593bb4f/ipad_pro_11_inch_lte_03.jpg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Ipad 2020</h2>
+                    <h3 class = "caracteristica">
+                        
+                        Pantalla: 10.9"
+                        /Procesador: Apple A14 Bionic
+                        /Almacenamiento: 64GB/256GB
+                        /Cámara: 12 MP
+                        /OS: iPadOS 16
+                        
+                    </h3> 
+					<h4></h4>
+                    <h5></h5>
+                
+					<p class="price">$750</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://i5.walmartimages.com/asr/e1ae90b2-98da-443b-888c-a71228c5234e.eb10d07052b374f38aa17166043f5a7a.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Smartwatch</h2>
+                    <h3 class = "caracteristica">  
+                        Monitorización de Salud: Control del ritmo cardíaco 
+                        /Notificaciones y Conectividad: Alertas y sincronización con el teléfono.
+                        /Batería: Garantiza un uso continuo sin recargas frecuentes.
+                        /Personalización: Permite adaptar la interfaz y agregar aplicaciones.
+                        /Diseño y Resistencia: Estética variada y resistencia al agua para diferentes estilos y situaciones.
+                    </h3> 
+					<p class="price">$90</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://www.citymac.com/store/wp-content/uploads/2021/05/AirTag_White_2-up_Screen__USEN.jpeg"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>AirTag</h2>
+                    <h3 class = "caracteristica">
+                        
+                        Tamaño: 31,9 mm & 8,0mm
+                        /peso: 11 gramos 
+                        /Certificado: IP67
+                        /Bluetooth: LE Apple U1 (UWB) NFC
+                        /sonido: Altavoz integrado
+                        /bateria: Pila CR2032 reemplazable (incluida)
+                        /sensor: Acelerómetro
+                        /compatibilidad :iPhone & iPad
+                    </h3> 
+                    <h4></h4>
+                    <h5></h5>
+                    <h6></h6>
+					<p class="price">$50</p>
+					<button class="btn-add-cart">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
 </html>
